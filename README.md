@@ -1,7 +1,7 @@
 ![Fuxion logo](https://github.com/MyCode32/mycode/blob/master/logos/logo.jpg)
 
 # mycode is the future of MITM WPA attacks
-MyCode3 is a security auditing and social-engineering research tool. It is a remake of linset by vk496 with (hopefully) fewer bugs and more functionality. The script attempts to retrieve the WPA/WPA2 key from a target access point by means of a social engineering (phishing) attack. It's compatible with the latest release of Kali (rolling). MyCode3's attacks' setup is mostly manual, but experimental auto-mode handles some of the attacks' setup parameters.
+mycode is a security auditing and social-engineering research tool. It is a combination Wireless Attacks tools of kali linux. The script attempts to retrieve the WPA/WPA2 key from a target access point by means of a social engineering (phishing) attack. It's compatible with the latest release of Kali (rolling). MyCode3's attacks' setup is mostly manual, but experimental auto-mode handles some of the attacks' setup parameters.
 
 ## Installation
 please download the latest version.
@@ -31,6 +31,7 @@ pacman -S mycode
 ```
 
 ## :book: How it works
+
 * Scan for a target wireless network.
 * Launch the `Handshake Snooper` attack.
 * Capture a handshake (necessary for password verification).
@@ -49,7 +50,14 @@ A Linux-based operating system. Basically, Kali Linux is recommended.
 
 Mycode need compatible WiFi Adapter.
 
+To do wireless Penetration Testing a card must be able to go into Monitor Mode and do Packet Injections, most cards cant do this. One thing to keep in mind is occasionally although rare manufactures can change the chipset in an adapter. This happens when a new updated version of the adapter is introduced. Although it doesn’t happen often it has happened in the past with popular dongles. 
+
 Read the [Kali Linux WiFi Adapter](https://hackersgrid.com/2020/02/wifi-adapter-for-kali-linux.html)
 
 ## Note
 * MyCode3 **DOES NOT WORK** on Linux Subsystem For Windows 10, because the subsystem doesn't allow access to network interfaces. Any Issue regarding the same would be **Closed Immediately**
+
+## Contribution
+
+Fikhri : DDMA10
+Polytechnic Brunei
