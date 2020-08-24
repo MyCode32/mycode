@@ -43,12 +43,13 @@ pacman -S mycode
 * The attack will automatically terminate once a correct key has been submitted.
 * The key will be logged and clients will be allowed to reconnect to the target access point.
 
-* For a guide to the `Captive Portal` attack, read the [Captive Portal attack guide](https://github.com/MyCode3Network/MyCode3/wiki/Captive-Portal-Attack)
-
 ## :heavy_exclamation_mark: Requirements
 
-A Linux-based operating system. We recommend Kali Linux 2019.4. An external wifi card is recommended.
+A Linux-based operating system. Basically, Kali Linux is recommended.
 
+Mycode need compatible WiFi Adapter.
+
+Read the [Kali Linux WiFi Adapter](https://hackersgrid.com/2020/02/wifi-adapter-for-kali-linux.html)
 
 ## Note
 * MyCode3 **DOES NOT WORK** on Linux Subsystem For Windows 10, because the subsystem doesn't allow access to network interfaces. Any Issue regarding the same would be **Closed Immediately**
