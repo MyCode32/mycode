@@ -50,6 +50,8 @@ A Linux-based operating system. Basically, Kali Linux is recommended.
 
 Mycode need compatible WiFi Adapter.
 
+![Fuxion logo](https://github.com/MyCode32/mycode/blob/master/logos/logo1.jpg)
+
 To do wireless Penetration Testing a card must be able to go into Monitor Mode and do Packet Injections, most cards cant do this. One thing to keep in mind is occasionally although rare manufactures can change the chipset in an adapter. This happens when a new updated version of the adapter is introduced. Although it doesn’t happen often it has happened in the past with popular dongles. 
 
 Read the [Kali Linux WiFi Adapter](https://hackersgrid.com/2020/02/wifi-adapter-for-kali-linux.html)
