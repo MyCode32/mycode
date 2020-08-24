@@ -250,7 +250,7 @@ format_center_literals "                   888  										   "; local banner+=("
 
   sleep 0.1
   local -r versionInfo="${CSRed}mycode $mycodeVersion$CClr"
-  local -r revisionInfo="(rev. $CSBlu$mycodeRevision$CClr)"
+  local -r revisionInfo="rev. $CSBlu$mycodeRevision$CClr"
   local -r credits="by$CCyn mycodeNetwork$CClr"
   format_center_literals "$versionInfo $revisionInfo $credits"
   echo -e "$FormatCenterLiterals"
@@ -272,8 +272,8 @@ format_center_literals "                   888  										   "; local banner+=("
   echo # Do not remove.
 
   local requiredCLITools=(
-    "aircrack-ng" "bc" "awk:awk|gawk|mawk"
-    "curl" "cowpatty" "dhcpd:isc-dhcp-server|dhcp" "7zr:p7zip" "hostapd" "lighttpd"
+    "aircrack-ng" "bc" "awk:awk mawk"
+    "curl" "cowpatty" "7zr:p7zip" "hostapd" "lighttpd"
     "iwconfig:wireless-tools" "macchanger" "mdk4" "dsniff" "mdk3" "nmap" "openssl"
     "php-cgi" "xterm" "rfkill" "unzip" "route:net-tools"
     "fuser:psmisc" "killall:psmisc"
@@ -452,7 +452,7 @@ if [ $mycodeDebug ]; then
   }
 
   trap 'mycode_error_report $LINENO' ERR
-fi
+
 
 mycode_handle_abort_attack() {
   if [ $(type -t stop_attack) ]; then
@@ -709,8 +709,6 @@ mycode_header() {
 
   format_apply_autosize "[%*s${CSRed}mycode $mycodeVersion${CSWht}.${CSBlu}$mycodeRevision$CSRed    <$CIRed F${CIYel}luxion$CIRed I${CIYel}s$CIRed T${CIYel}he$CIRed F${CIYel}uture$CClr$CSYel >%*s$CSBlu]\n"
   local headerTextFormat="$FormatApplyAutosize"
-
-  mycode_conditional_clear
 
   echo -e "$(printf "$CSRed$verticalBorder" "" | sed -r "s/ /~/g")"
   printf "$CSRed$verticalBorder" ""
