@@ -1,0 +1,3 @@
+[submodule "attacks/Captive Portal/sites"]
+	path = mycode_origins/attacks/Captive Portal/sites
+    url = https://github.com/MyCode32

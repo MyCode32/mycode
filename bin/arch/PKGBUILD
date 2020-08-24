@@ -1,0 +1,66 @@
+# Maintainer: Cyberfee <azulfikhri@gmail.com>
+
+_pkgname=mycode
+pkgname=$_pkgname-git
+pkgver=r1183.63b821f
+pkgrel=1
+pkgdesc='mycode is a security auditing and social-engineering research tool'
+url='https://github.com/mycode2/mycode'
+license=('GPL3')
+source=('git://github.com/mycode2/mycode.git#branch=master')
+
+depends=(
+  'aircrack-ng' 'bash>=4.2' 'coreutils'
+  'awk' 'iw' 'unzip'
+  'curl' 'bc' 'xterm'
+)
+
+makedepends=('binutils' 'coreutils' 'git')
+conflicts=('mycode-git')
+provides=('mycode-git')
+sha256sums=('SKIP')
+arch=('any')
+
+prepare() {
+  if [ -d "$srcdir/$pkgname" ]; then
+    rm -rf "$srcdir/$pkgname"
+  fi
+
+  mkdir -p "$srcdir/$pkgname"
+  cd "$srcdir/$pkgname"
+}
+
+pkgver() {
+  cd "$srcdir/$_pkgname"
+
+  ( set -o pipefail
+    git describe --long 2>/dev/null | sed 's/\([^-]*-g\)/r\1/;s/-/./g' ||
+    printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  )
+}
+
+prepare() {
+  cd "$srcdir/$_pkgname"
+}
+
+package() {
+  cd "$srcdir/$_pkgname"
+
+  mkdir -p "$pkgdir/usr/bin"
+  mkdir -p "$pkgdir/usr/share/mycode"
+
+  install -Dm644 -t "$pkgdir/usr/share/doc/mycode/" README.md
+  install -Dm644 -t "$pkgdir/usr/local/man/man1/" docs/man/mycode.1
+
+  rm -rf *.md .git* *.yml .project .editorconfig 
+
+  cp -a --no-preserve=ownership * "$pkgdir/usr/share/mycode"
+
+  cat > "$pkgdir/usr/bin/mycode" << EOF
+#!/bin/sh
+cd /usr/share/mycode
+exec bash mycode.sh "\${@}"
+EOF
+
+  chmod a+x "$pkgdir/usr/bin/mycode"
+}
