@@ -1,7 +1,7 @@
 ![Fuxion logo](https://github.com/MyCode32/mycode/blob/master/logos/logo.jpg)
 
 # mycode is the future of MITM WPA attacks
-MyCode3 is a security auditing and social-engineering research tool. It is a remake of linset by vk496 with (hopefully) fewer bugs and more functionality. The script attempts to retrieve the WPA/WPA2 key from a target access point by means of a social engineering (phishing) attack. It's compatible with the latest release of Kali (rolling). MyCode3's attacks' setup is mostly manual, but experimental auto-mode handles some of the attacks' setup parameters. Read the [FAQ](https://github.com/MyCode3Network/MyCode3/wiki/FAQ) before requesting issues.
+MyCode3 is a security auditing and social-engineering research tool. It is a remake of linset by vk496 with (hopefully) fewer bugs and more functionality. The script attempts to retrieve the WPA/WPA2 key from a target access point by means of a social engineering (phishing) attack. It's compatible with the latest release of Kali (rolling). MyCode3's attacks' setup is mostly manual, but experimental auto-mode handles some of the attacks' setup parameters.
 
 ## Installation
 please download the latest version.
